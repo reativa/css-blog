@@ -1,0 +1,50 @@
+---
+date: "2020-01-04"
+description: ''
+title: CSS como usar o Counter
+tags: visual, other
+---
+
+Counters are, in essence, variables maintained by CSS whose values may be incremented by CSS rules to track how many times they're used.
+
+```html
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+  <li>
+    List item
+    <ul>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css
+ul {
+  counter-reset: counter;
+}
+
+li::before {
+  counter-increment: counter;
+  content: counters(counter, '.') ' ';
+}
+```
+
+#### Explanation
+
+- You can create a ordered list using any type of HTML.
+
+1. `counter-reset` Initializes a counter, the value is the name of the counter. By default, the counter starts at 0. This property can also be used to change its value to any specific number.
+2. `counter-increment` Used in element that will be countable. Once `counter-reset` initialized, a counter's value can be increased or decreased.
+3. `counter(name, style)` Displays the value of a section counter. Generally used in a `content` property. This function can receive two parameters, the first as the name of the counter and the second one can be `decimal` or `upper-roman` (`decimal` by default).
+4. `counters(counter, string, style)` Displays the value of a section counter. Generally used in a `content` property. This function can receive three parameters, the first as the name of the counter, the second one you can include a string which comes after the counter and the third one can be `decimal` or `upper-roman` (`decimal` by default).
+5. A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements. Using the `counters()` function, separating text can be inserted between different levels of nested counters.
+
+#### Browser support
+
+- https://caniuse.com/#feat=css-counters
+
+[Acesse a Referência original](http://github.com/30-seconds/)
