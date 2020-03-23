@@ -1,15 +1,15 @@
 ---
 date: "2020-01-04"
 description: ''
-title: CSS como usar o Border with top triangle
+title: CSS - Borda com Triângulo no Topo (balãozinho)
 tags: visual,beginner
 ---
 
-Creates a text container with a triangle at the top.
+Cria um container de texto com um triângulo no topo (balãozinho).
 
 ```html
 <div class="container">
-  Border with top triangle
+  Borda com Triângulo no Topo
 </div>
 ```
 
@@ -38,14 +38,16 @@ Creates a text container with a triangle at the top.
 }
 ```
 
-#### Explanation
+#### Explicação
 
-- Use the `:before` and `:after` pseudo-elements to create two triangles. 
-- The color of the `:before` triangle should be the same as the container's border color. 
-- The color of the `:after` triangle should be the same as the container background color.
-- The border width of the `:before` triangle should be `1px` wider than the `:after` triangle, in order to act as the border.
-- The `:after` triangle should be `1px` to the right of the `:before` triangle to allow for its left border to be shown.
+- Use os pseudo-elementos `:before` e `:after` para criar dois triângulos.
+- A cor do triângulo de `:before` deve ter a mesma cor da borda do container.
+- A cor do triângulo de `:after` deve ter a mesma cor de fundo do container.
+- A largura da borda do triângulo de `:before` deve ser `1px` mais larga do que a do triângulo de `:after`, servindo assim de borda do triângulo.
+- O triângulo de `:after` deve ser de `1px` para a direita do triângulo de `:before` para permitir que sua borda esquerda seja mostrada.
 
-#### Browser support
+#### Browser Support
+
+100.0%
 
 [Acesse a Referência original](http://github.com/30-seconds/)
