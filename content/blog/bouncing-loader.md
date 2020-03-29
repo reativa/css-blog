@@ -1,11 +1,11 @@
 ---
 date: "2020-01-04"
 description: ''
-title: CSS como usar o Bouncing loader
-tags: animation,intermediate
+title: CSS - como usar o Bouncing Loader
+tags: animação, intermedário
 ---
 
-Creates a bouncing loader animation.
+Cria uma animação _bouncing loarder_.
 
 ```html
 <div class="bouncing-loader">
@@ -42,20 +42,33 @@ Creates a bouncing loader animation.
 }
 ```
 
-#### Explanation
+#### Explicação
 
-Note: `1rem` is usually `16px`.
+Nota: `1rem` normalmente equivale a `16px`.
 
-1. `@keyframes` defines an animation that has two states, where the element changes `opacity` and is translated up on the 2D plane using `transform: translate3d()`. Using a single axis translation on `transform: translate3d()` improves the performance of the animation.
-2. `.bouncing-loader` is the parent container of the bouncing circles and uses `display: flex` and `justify-content: center` to position them in the center.
-3. `.bouncing-loader > div`, targets the three child `div`s of the parent to be styled. The `div`s are given a width and height of `1rem`, using `border-radius: 50%` to turn them from squares to circles.
-4. `margin: 3rem 0.2rem` specifies that each circle has a top/bottom margin of `3rem` and left/right margin of `0.2rem` so that they do not directly touch each other, giving them some breathing room.
-5. `animation` is a shorthand property for the various animation properties: `animation-name`, `animation-duration`, `animation-iteration-count`, `animation-direction` are used.
-6. `nth-child(n)` targets the element which is the nth child of its parent.
-7. `animation-delay` is used on the second and third `div` respectively, so that each element does not start the animation at the same time.
+1. `@keyframes` define uma animação que tem dois estados, onde o elemento muda a opacidade(`opacity`) e é transladado no plano 2D através de `transform: translate3d()`. Usando apenas um eixo de transladação em `transform: translate3d()` melhora a performance da animação.
+2. `.bouncing-loader` é o _container_ pai da animação(_bouncing circles_) e usa `display: flex` e `justify-content: center` para posicioná-los no centro.
+3. `.bouncing-loader > div` marca a árvore de três elementos `div`s filhos do elemento pai para ser estilizado. As `div`s recebem largura e altura de `1rem`, usando `border-radius: 50%` para transformar quadrados em círculos.
+4. `margin: 3rem 0.2rem` determina que cada círculo tem uma margem inferior/superior de `3rem` e uma margem direita/esquerda de `0.2rem`, assim elas não tocam diretamente uma nas outras, dando a elas um espaço para "respirar".
+5. `animation` é uma forma abreviada de várias propriedades de animação: `animation-name`, `animation-duration`, `animation-iteration-count`, `animation-direction` são usadas.
+6. `nth-child(n)` marca qual é o enésimo elemento filho do elemento pai.
+7. `animation-delay` é usado na segunda e na terceira `div` respectivamente, assim cada elemento não inicia a animação ao mesmo tempo.
 
-#### Browser support
+
+#### Suporte a Navegadores
 
 - https://caniuse.com/#feat=css-animation
+
+
+#### Notas de Tradução
+
+1. A função `translate3d()` [aceita três argumentos](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d):
+   1. `tx` - referente ao eixo `x`
+   2. `ty` - referente ao eixo `y`
+   3. `tz` - referente ao eixo `z`
+
+Nesse exemplo, zeramos os eixos `x` e `z`, para definimos o valor de `y` a `-1rem` para que os círculos pulem apenas na horizontal, respeitando o limite de `1rem`.
+
+2. `rem` é uma abreviação para `root element` e é uma unidade de medida relativa, sendo recomendada, pela [w3.org](https://www.w3.org/TR/css-values-3/#font-relative-lengths), para estilizar o comprimento de elementos tipográficos(fontes).
 
 [Acesse a Referência original](http://github.com/30-seconds/)
