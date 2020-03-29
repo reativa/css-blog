@@ -22,7 +22,7 @@ Cria um container de texto com um triângulo no topo (balãozinho).
   margin-top: 20px;
 }
 
-.container:before, .container:after {
+.container::before, .container::after {
   content: '';
   position: absolute;
   bottom: 100%;
@@ -31,7 +31,7 @@ Cria um container de texto com um triângulo no topo (balãozinho).
   border-bottom-color: #dddddd;
 }
 
-.container:after {
+.container::after {
   left: 20px;
   border: 10px solid transparent;
   border-bottom-color: #ffffff;
@@ -40,11 +40,11 @@ Cria um container de texto com um triângulo no topo (balãozinho).
 
 #### Explicação
 
-- Use os pseudo-elementos `:before` e `:after` para criar dois triângulos.
-- A cor do triângulo de `:before` deve ter a mesma cor da borda do container.
-- A cor do triângulo de `:after` deve ter a mesma cor de fundo do container.
-- A largura da borda do triângulo de `:before` deve ser `1px` mais larga do que a do triângulo de `:after`, servindo assim de borda do triângulo.
-- O triângulo de `:after` deve ser de `1px` para a direita do triângulo de `:before` para permitir que sua borda esquerda seja mostrada.
+- Use os pseudo-elementos `::before` e `::after` para criar dois triângulos.
+- A cor do triângulo de `::before` deve ter a mesma cor da borda do container.
+- A cor do triângulo de `::after` deve ter a mesma cor de fundo do container.
+- A largura da borda do triângulo de `::before` deve ser `1px` mais larga do que a do triângulo de `::after`, servindo assim de borda do triângulo.
+- O triângulo de `::after` deve ser de `1px` para a direita do triângulo de `::before` para permitir que sua borda esquerda seja mostrada.
 
 #### Browser Support
 
