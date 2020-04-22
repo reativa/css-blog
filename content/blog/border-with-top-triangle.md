@@ -46,7 +46,7 @@ Cria um container de texto com um triângulo no topo (balãozinho).
 - A largura da borda do triângulo de `::before` deve ser `1px` mais larga do que a do triângulo de `::after`, servindo assim de borda do triângulo.
 - O triângulo de `::after` deve ser de `1px` para a direita do triângulo de `::before` para permitir que sua borda esquerda seja mostrada.
 
-#### Browser Support
+#### Suporte a Navegadores
 
 100.0%
 
