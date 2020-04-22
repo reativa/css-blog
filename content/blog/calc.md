@@ -1,11 +1,11 @@
 ---
 date: "2020-01-04"
 description: ''
-title: CSS como usar o Calc()
+title: CSS - Como usar a função Calc()
 tags: other
 ---
 
-The function calc() allows to define CSS values with the use of mathematical expressions, the value adopted for the property is the result of a mathematical expression.
+A função `calc()` permite ao CSS definir valores com o uso de expressões matemáticas. O valor adotado pela propriedade é o resultado de uma expressão matemática.
 
 ```html
 <div class="box-example"></div>
@@ -19,14 +19,14 @@ The function calc() allows to define CSS values with the use of mathematical exp
 }
 ```
 
-#### Explanation
+#### Explicação
 
-1. It allows addition, subtraction, multiplication and division.
-2. Can use different units (pixel and percent together, for example) for each value in your expression.
-3. It is permitted to nest calc() functions.
-4. It can be used in any property that `<length>`, `<frequency>`, `<angle>`, `<time>`, `<number>`, `<color>`, or `<integer>` is allowed, like width, height, font-size, top, left, etc.
+1. Ela permite somar, subtrair, multiplicar e dividir.
+2. Pode ser utilizada com unidades de medidas diferentes (pixel e porcentagenm juntas, por exemplo).
+3. É permitido aninhar funções `calc()`.
+4. Pode ser usada com qualquer propriedade em que `<length>`, `<frequency>`, `<angle>`, `<time>`, `<number>`, `<color>`, ou `<integer>` é permitida, como width, height, font-size, top, left, etc.
 
-#### Browser support
+#### Suporte a Navegadores
 
 - https://caniuse.com/#feat=calc
 
