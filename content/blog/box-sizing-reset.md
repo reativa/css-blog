@@ -1,11 +1,11 @@
 ---
 date: "2020-01-04"
 description: ''
-title: CSS como usar o Box-sizing reset
+title: CSS - Como usar o Box-sizing Reset
 tags: layout
 ---
 
-Resets the box-model so that `width`s and `height`s are not affected by their `border`s or `padding`.
+Redefine o _box-model_ para que alturas(`height`) e larguras(`width`) não sejam afetadas por suas bordas(`borders`) ou preenchimento(`padding`)
 
 ```html
 <div class="box">border-box</div>
@@ -35,13 +35,13 @@ html {
 }
 ```
 
-#### Explanation
+#### Explicação
 
-1. `box-sizing: border-box` makes the addition of `padding` or `border`s not affect an element's `width` or `height`.
-2. `box-sizing: inherit` makes an element respect its parent's `box-sizing` rule.
+1. `box-sizing: border-box` faz com que a adição do preenchimento(`padding`) ou das bordas(`borders`) não afete a altura e a largura de um elemento.
+2. `box-sizing: inherit` faz um elemento respeitar a regra de `box-sizing` do seu elemento pai.
 
-#### Browser support
+#### Suporte à Navegadores
 
 - https://caniuse.com/#feat=css3-boxsizing
 
-[Acesse a Referência original](http://github.com/30-seconds/)
+[Acesse a Referência Original](http://github.com/30-seconds/)
